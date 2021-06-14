@@ -1,17 +1,5 @@
-# vite-vue3-ts-jest
+# Ruri
 
-A template with vite, vue3, typescript, jest.
+~~是一个不知道会变成什么样的项目~~
 
-## scripts
-
-### get started
-
-```shell
-git clone https://github.com/LoTwT/vite-vue3-ts-jest.git
-```
-
-### run test
-
-```shell
-yarn test
-```
+**=> to be continued** :cry:
