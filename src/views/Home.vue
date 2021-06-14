@@ -21,17 +21,20 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue"
 import { NGradientText, NSpace, NButton } from "naive-ui"
+import { useRouter } from "vue-router"
 
 export default defineComponent({
   name: "Home",
   components: { NGradientText, NSpace, NButton },
   setup: () => {
+    const router = useRouter()
     // 按钮是否有加载状态
     const isLoading = ref(false)
     // 处理按钮点击事件
     const handleClick = () => {
       isLoading.value = !isLoading.value
       if (isLoading.value === false) return
+      router.push({ name: "Editor" })
     }
     return {
       isLoading,
