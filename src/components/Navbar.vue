@@ -1,9 +1,9 @@
 <template>
   <div class="navbar-wrapper">
-    <n-icon :size="48" @click="backHome">
+    <n-icon :size="48" @click="backHome" color="skyblue">
       <home-outline />
     </n-icon>
-    <div class="text">一个一点也不好看的导航...</div>
+    <n-gradient-text type="info" :size="24" class="navbar-text">这竟然是一个导航...</n-gradient-text>
     <n-avatar :size="48" src="/avatar.jpg" />
   </div>
 </template>
@@ -11,7 +11,7 @@
 <script lang="ts">
 import { defineComponent } from "vue"
 import { useRouter } from "vue-router"
-import { NAvatar, NIcon } from "naive-ui"
+import { NAvatar, NIcon, NGradientText } from "naive-ui"
 import { HomeOutline } from "@vicons/ionicons5"
 
 export default defineComponent({
@@ -19,7 +19,8 @@ export default defineComponent({
   components: {
     NAvatar,
     NIcon,
-    HomeOutline
+    HomeOutline,
+    NGradientText
   },
   setup: () => {
     const router = useRouter()
@@ -43,8 +44,7 @@ export default defineComponent({
   width: 100%;
   height: 48px;
 }
-.text {
-  font-size: 24px;
+.navbar-text {
   line-height: 48px;
 }
 </style>
